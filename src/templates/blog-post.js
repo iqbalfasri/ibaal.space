@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import { graphql } from "gatsby";
 // import styled from "styled-components";
 import Layout from "../components/layout";
@@ -49,10 +49,10 @@ import Layout from "../components/layout";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
-  console.log(post);
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
+      <p dangerouslySetInnerHTML={{ __html: post.html }} />
       {/* <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>

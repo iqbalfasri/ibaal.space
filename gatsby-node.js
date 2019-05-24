@@ -36,12 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
       return Promise.reject(result.errors);
     }
 
-    console.log(JSON.stringify(result), "result node")
-
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-
-      console.log(JSON.stringify(node), "NODE ARRAY OBJ")
-
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
