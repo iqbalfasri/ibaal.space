@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import { graphql } from "gatsby";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Layout from "../components/layout";
 
 // const Content = styled.div`
@@ -50,17 +50,18 @@ import Layout from "../components/layout";
 export default ({ data }) => {
   const post = data.markdownRemark;
   console.log(post);
-  // return (
-  //   <Layout>
-  //     <Content>
-  //       <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-  //       <HeaderDate>
-  //         {post.frontmatter.date} - {post.fields.readingTime.text}
-  //       </HeaderDate>
-  //       <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-  //     </Content>
-  //   </Layout>
-  // );
+  return (
+    <Layout>
+      <h1>{post.frontmatter.title}</h1>
+      {/* <Content>
+        <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
+        <HeaderDate>
+          {post.frontmatter.date} - {post.fields.readingTime.text}
+        </HeaderDate>
+        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Content> */}
+    </Layout>
+  );
 };
 
 export const pageQuery = graphql`
