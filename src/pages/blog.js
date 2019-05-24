@@ -22,6 +22,7 @@ const BlogPage = ({ data }) => {
               <span>
                 <p>{date}</p>
               </span>
+              <p>{excerpt}</p>
             </div>
           </Link>
         );
