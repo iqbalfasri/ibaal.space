@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Typed from "react-typed";
+import Seo from "../components/seo";
 import * as LandingStyled from "../components/styled";
 
 function LandingPage() {
@@ -7,6 +8,7 @@ function LandingPage() {
 
   return (
     <LandingStyled.ViewLanding>
+      <Seo title="Homepage" />
       <div className="container">
         <LandingStyled.TitleLanding className="title-landing">
           <Typed
@@ -18,23 +20,17 @@ function LandingPage() {
             }}
           />
         </LandingStyled.TitleLanding>
-        {typedIsComplete && (
-          <>
-            <LandingStyled.DescLanding className="desc-landing">
-              <Typed
-                strings={[
-                  "I really passionate with programming focus on Frontend, I learn everything autodidact on the internet. I am a coffee lover, and UI Enthusiast.",
-                ]}
-                startDelay={500}
-                typeSpeed={10}
-              />
-            </LandingStyled.DescLanding>
-            <div>
-              <LandingStyled.LandingButton>My Blog</LandingStyled.LandingButton>
-              <LandingStyled.LandingButton>Projects</LandingStyled.LandingButton>
-            </div>
-          </>
-        )}
+        <LandingStyled.DescLanding>
+          I really passionate with programming focus on Frontend, I learn
+          everything autodidact on the internet. I am a coffee lover, and UI
+          Enthusiast.
+        </LandingStyled.DescLanding>
+        <>
+          <LandingStyled.LandingButton href="/blog">
+            My Blog
+          </LandingStyled.LandingButton>
+          <LandingStyled.LandingButton>My Projects</LandingStyled.LandingButton>
+        </>
       </div>
     </LandingStyled.ViewLanding>
   );

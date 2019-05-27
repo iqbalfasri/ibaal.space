@@ -32,6 +32,7 @@ export const TitleLanding = styled.h1`
   max-width: 55%;
   bottom: 25px;
   position: relative;
+  color: #fea53e;
 `;
 
 export const DescLanding = styled.p`
@@ -39,6 +40,7 @@ export const DescLanding = styled.p`
   font-weight: 400;
   max-width: 55%;
   line-height: 30px;
+  color: #222;
 `;
 
 export const LandingButton = styled.a`
@@ -49,17 +51,17 @@ export const LandingButton = styled.a`
   background: 0 0;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px 15px;
-  color: #222;
+  padding: 5px 15px;
+  color: #222 !important;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 500;
   box-shadow: 4px 4px #222;
   transition: box-shadow 0.15s ease-in;
   text-decoration: none;
-  animation: ${onLoadAnimation} 2.5s;
   margin: 30px 25px 0px 0px;
   cursor: pointer;
+  text-decoration: none !important;
 
   &:hover {
     box-shadow: 0px 0px transparent;
