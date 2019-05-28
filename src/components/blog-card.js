@@ -7,13 +7,11 @@ function BlogCard({ node }) {
   const { title, date, path } = frontmatter;
 
   return (
-    <div className="container">
-      <Link id={id} to={path}>
-        <h1>{title}</h1>
-        <span>{date}</span>
-        <p>{excerpt}</p>
-      </Link>
-    </div>
+    <Link id={id} to={path}>
+      <h1>{title}</h1>
+      <span>{date}</span>
+      <p>{excerpt}</p>
+    </Link>
   );
 }
 
