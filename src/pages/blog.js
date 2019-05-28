@@ -2,6 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
+import BlogCard from "../components/blog-card";
 
 const BlogPage = ({ data }) => {
   const allMarkdownRemark = data.allMarkdownRemark.edges;
@@ -11,21 +12,7 @@ const BlogPage = ({ data }) => {
       <Seo title={`Blog`} />
 
       {allMarkdownRemark.map(({ node }) => {
-        const { id, excerpt, frontmatter, fields } = node;
-        const { title, date, path } = frontmatter;
-        const { slug, readingTime } = fields;
-
-        return (
-          <Link key={id} to={path}>
-            <div>
-              <h1>{title}</h1>
-              <span>
-                <p>{date}</p>
-              </span>
-              <p>{excerpt}</p>
-            </div>
-          </Link>
-        );
+        return <BlogCard node={node} />;
       })}
     </Layout>
   );
