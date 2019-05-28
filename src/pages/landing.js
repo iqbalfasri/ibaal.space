@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Typed from "react-typed";
 import Seo from "../components/seo";
 import * as LandingStyled from "../components/styled";
 
 function LandingPage() {
-  const [typedIsComplete, setTypedIsComplete] = useState(false);
-
   return (
     <LandingStyled.ViewLanding>
       <Seo title="Homepage" />
@@ -14,10 +12,6 @@ function LandingPage() {
           <Typed
             strings={["I'm a Frontend Developer &amp; UI Enthusiast."]}
             typeSpeed={50}
-            onComplete={p => {
-              let isComplete = p instanceof Object;
-              setTypedIsComplete(isComplete);
-            }}
           />
         </LandingStyled.TitleLanding>
         <LandingStyled.DescLanding>

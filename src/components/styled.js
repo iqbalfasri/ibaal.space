@@ -5,17 +5,6 @@ import styled, { keyframes } from "styled-components";
  * Landing Page styled
  */
 
-const onLoadAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
 export const ViewLanding = styled.div`
   width: 100%;
   height: 100vh;
@@ -51,7 +40,7 @@ export const LandingButton = styled.a`
   background: 0 0;
   text-transform: uppercase;
   text-align: center;
-  padding: 5px 15px;
+  padding: 10px 15px;
   color: #222 !important;
   letter-spacing: 0.05em;
   font-size: 0.875rem;
