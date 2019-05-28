@@ -13,6 +13,7 @@ export const ViewLanding = styled.div`
   align-items: center;
   background-color: #eff4fd;
   overflow: scroll;
+  font-family: "Roboto Mono", monospace;
 `;
 
 export const TitleLanding = styled.h1`
