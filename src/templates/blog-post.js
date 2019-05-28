@@ -53,15 +53,17 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <h1>{post.frontmatter.title}</h1>
-      <p dangerouslySetInnerHTML={{ __html: post.html }} />
-      {/* <Content>
+      <div className="container">
+        <h1>{post.frontmatter.title}</h1>
+        {/* <p dangerouslySetInnerHTML={{ __html: post.html }} /> */}
+        {/* <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
         <HeaderDate>
           {post.frontmatter.date} - {post.fields.readingTime.text}
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content> */}
+      </div>
     </Layout>
   );
 };
