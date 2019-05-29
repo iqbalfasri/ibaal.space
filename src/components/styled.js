@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 /**
  * Landing Page styled
@@ -11,7 +11,6 @@ export const ViewLanding = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eff4fd;
   overflow: scroll;
   font-family: "Roboto Mono", monospace;
 `;

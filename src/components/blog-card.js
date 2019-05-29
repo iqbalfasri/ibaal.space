@@ -8,9 +8,11 @@ function BlogCard({ node }) {
 
   return (
     <Link id={id} to={path}>
-      <h1>{title}</h1>
-      <span>{date}</span>
-      <p>{excerpt}</p>
+      <div className="blog-card">
+        <h1 className="blog-title">{title}</h1>
+        <span>{date}</span>
+        <p>{excerpt}</p>
+      </div>
     </Link>
   );
 }

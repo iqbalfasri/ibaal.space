@@ -7,8 +7,7 @@ import BlogCard from "../components/blog-card";
 
 const BlogHeader = styled.div`
   width: 100%;
-  padding: 80px 0;
-  background-color: #fff;
+  padding: 80px 0 50px;
   text-align: left;
   margin-bottom: 50px;
 `;
@@ -17,10 +16,13 @@ const BlogHeaderText = styled.h1`
   color: #222;
   font-size: 44px;
   font-weight: bold;
+  text-align: center;
 `;
 
 const BlogContent = styled.div`
-  font-family: "Nunito", Helvetica, sans-serif;
+  font-family: "Roboto Mono", monospace;
+  width: 100% !important;
+  max-width: 980px;
 `;
 
 const BlogPage = ({ data }) => {
@@ -31,12 +33,13 @@ const BlogPage = ({ data }) => {
       <Seo title={`Blog`} />
       <BlogContent className="container">
         <BlogHeader>
-          <BlogHeaderText>Tulisan Iqbal Fasri</BlogHeaderText>
+          <BlogHeaderText>Cuma iseng</BlogHeaderText>
         </BlogHeader>
         <div className="row">
           {allMarkdownRemark.map(({ node }) => {
             return (
-              <div className="col-md-4 col-xs-12 col-sm-12">
+              <div className="blog-rows col-md-4 col-xs-12 col-sm-12">
+                <BlogCard node={node} />
                 <BlogCard node={node} />
               </div>
             );

@@ -2,7 +2,41 @@
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+/* Main page style */
+body {
+  background-color: #eff4fd;
+}
+
+/* Blog style */
+.blog-rows {
+  display: block;
+  margin: 0 auto !important;
+}
+.blog-rows a {
+  color: #222;
+  text-decoration: none;
+}
+.blog-card {
+  background-color: #fea53e;
+  height: auto;
+  min-height: 220px;
+  width: 100% !important;
+  padding: 30px 35px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  position: relative;
+  box-shadow: 20px 20px #222;
+  transition: box-shadow 0.15s ease-in;
+}
+.blog-card:hover {
+  box-shadow: 15px 15px #222;
+}
+.blog-card .blog-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
 
 /* Responsive */
 @media only screen and (max-width: 414px) {
