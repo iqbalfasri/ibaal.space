@@ -1,4 +1,29 @@
 ---
 label: Blog Post
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+  description: Judul tulisan
+- name: date
+  type: datetime
+  label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: draft
+  type: boolean
+  label: draft
+  default: false
+- name: path
+  type: text
+  config:
+    required: false
+  label: path
