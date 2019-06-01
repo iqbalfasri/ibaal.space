@@ -33,13 +33,15 @@ const BlogPage = ({ data }) => {
       <Seo title={`Blog`} />
       <BlogContent className="container">
         <BlogHeader>
-          <BlogHeaderText>Cuma iseng</BlogHeaderText>
+          <BlogHeaderText>Catatan Ibaal</BlogHeaderText>
+          <p>
+            <center>Karena saya pelupa, makanya saya catat.</center>
+          </p>
         </BlogHeader>
         <div className="row">
           {allMarkdownRemark.map(({ node }) => {
             return (
-              <div className="blog-rows col-md-4 col-xs-12 col-sm-12">
-                <BlogCard node={node} />
+              <div className="blog-rows col-md-5 col-xs-12 col-sm-12">
                 <BlogCard node={node} />
               </div>
             );

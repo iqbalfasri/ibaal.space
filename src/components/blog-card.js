@@ -11,7 +11,6 @@ function BlogCard({ node }) {
       <div className="blog-card">
         <h1 className="blog-title">{title}</h1>
         <span>{date}</span>
-        <p>{excerpt}</p>
       </div>
     </Link>
   );

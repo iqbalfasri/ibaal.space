@@ -2,6 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 /**
+ * Theme
+ * Dark or Light
+ */
+
+export const BodyTheme = styled.body`
+  background-color: ${props => props.isDark? "#3a425d" : "white"};
+`;
+
+/**
  * Landing Page styled
  */
 
@@ -35,9 +44,9 @@ export const DescLanding = styled.p`
 export const LandingButton = styled.a`
   display: inline-block;
   margin: 0 25px 0 0;
-  border: 3px solid #222;
+  background-color: white;
+  outline: 3px solid #222;
   border-radius: 0;
-  background: 0 0;
   text-transform: uppercase;
   text-align: center;
   padding: 10px 15px;
@@ -45,7 +54,7 @@ export const LandingButton = styled.a`
   letter-spacing: 0.05em;
   font-size: 0.875rem;
   font-weight: 500;
-  box-shadow: 4px 4px #222;
+  box-shadow: 7px 7px #fcaf3e;
   transition: box-shadow 0.15s ease-in;
   text-decoration: none;
   margin: 30px 25px 0px 0px;
@@ -53,6 +62,6 @@ export const LandingButton = styled.a`
   text-decoration: none !important;
 
   &:hover {
-    box-shadow: 0px 0px transparent;
+    box-shadow: 5px 5px #fcaf3e;
   }
 `;
