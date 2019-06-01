@@ -27,3 +27,5 @@ fields:
   config:
     required: false
   label: path
+pages:
+- src/content/testing-bangsat.md
