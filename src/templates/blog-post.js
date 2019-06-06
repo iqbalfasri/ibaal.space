@@ -27,6 +27,11 @@ const BlogContent = styled.div`
 
 export default ({ data }) => {
   const post = data.markdownRemark;
+
+  const readingTime = post.fields.readingTime.text;
+
+  console.log(readingTime)
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />

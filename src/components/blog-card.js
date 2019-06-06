@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled, { createGlobalStyle } from "styled-components";
 
 function BlogCard({ node }) {
-  const { id, excerpt, frontmatter } = node;
+  const { id, frontmatter } = node;
   const { title, date, path } = frontmatter;
 
   return (

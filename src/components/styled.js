@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 /**
@@ -31,6 +30,7 @@ export const TitleLanding = styled.h1`
   bottom: 25px;
   position: relative;
   color: #fea53e;
+  height: 100px;
 `;
 
 export const DescLanding = styled.p`
@@ -38,7 +38,7 @@ export const DescLanding = styled.p`
   font-weight: 400;
   max-width: 55%;
   line-height: 30px;
-  color: #222;
+  color: #f5f5f5;
 `;
 
 export const LandingButton = styled.a`
