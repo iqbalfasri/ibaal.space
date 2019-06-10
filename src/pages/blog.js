@@ -12,8 +12,12 @@ const BlogHeader = styled.div`
   margin-bottom: 50px;
 `;
 
+const BlogHeaderDesc = styled.p`
+  color: #f2f2f2;
+`;
+
 const BlogHeaderText = styled.h1`
-  color: #222;
+  color: #fcaf3e;
   font-size: 44px;
   font-weight: bold;
   text-align: center;
@@ -27,27 +31,43 @@ const BlogContent = styled.div`
 
 const BlogPage = ({ data }) => {
   const allMarkdownRemark = data.allMarkdownRemark.edges;
+  const getFullYear = new Date().getFullYear();
 
   return (
     <Layout>
       <Seo title={`Blog`} />
       <BlogContent className="container">
         <BlogHeader>
-          <BlogHeaderText>Catatan Ibaal</BlogHeaderText>
-          <p>
-            <center>Karena saya pelupa, makanya saya catat.</center>
-          </p>
+          <BlogHeaderText>Catatan Iqbal</BlogHeaderText>
+          <center>
+            <BlogHeaderDesc>
+              Karena saya pelupa, makanya saya catat.
+            </BlogHeaderDesc>
+          </center>
         </BlogHeader>
         <div className="row">
           {allMarkdownRemark.map(({ node }) => {
             return (
-              <div className="blog-rows col-md-5 col-xs-12 col-sm-12">
+              <div
+                key={node.id}
+                className="blog-rows col-md-5 col-xs-12 col-sm-12"
+              >
                 <BlogCard node={node} />
               </div>
             );
           })}
         </div>
       </BlogContent>
+      <div
+        style={{
+          color: "white",
+          padding: "30px 0 0 0",
+          boxSizing: "border-box",
+          textAlign: "center",
+        }}
+      >
+        <p>&copy; Iqbal Fasri {getFullYear}</p>
+      </div>
     </Layout>
   );
 };

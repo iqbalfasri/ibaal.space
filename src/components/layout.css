@@ -7,6 +7,12 @@
 /* Main page style */
 body {
   background-color: #3a425d !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body hr {
+  background-color: #fff;
+  opacity: .3;
 }
 
 /* Blog style */

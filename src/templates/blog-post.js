@@ -12,7 +12,7 @@ const BlogHeader = styled.div`
 `;
 
 const BlogHeaderText = styled.h1`
-  color: #222;
+  color: #fcaf3e;
   font-size: 44px;
   font-weight: bold;
   text-align: center;
@@ -22,24 +22,34 @@ const BlogContent = styled.div`
   font-family: "Roboto Mono", monospace;
   width: 100% !important;
   max-width: 980px;
+  color: #fff;
 `;
 
+const FloatingBack = styled.button`
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* background-color: salmon; */
+  display: flex;
+  left: 50vw;
+  right: 50vw;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+`;
 
 export default ({ data }) => {
   const post = data.markdownRemark;
 
   const readingTime = post.fields.readingTime.text;
 
-  console.log(readingTime)
-
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
       <BlogContent className="container">
         <BlogHeader>
-          <BlogHeaderText>
-            {post.frontmatter.title}
-          </BlogHeaderText>
+          <BlogHeaderText>{post.frontmatter.title}</BlogHeaderText>
         </BlogHeader>
         <p dangerouslySetInnerHTML={{ __html: post.html }} />
         {/* <Content>
@@ -49,6 +59,9 @@ export default ({ data }) => {
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content> */}
+        <FloatingBack onClick={e => (window.location.pathname = "/blog")}>
+          X
+        </FloatingBack>
       </BlogContent>
     </Layout>
   );
