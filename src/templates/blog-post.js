@@ -1,5 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -18,6 +20,13 @@ const BlogHeaderText = styled.h1`
   text-align: center;
 `;
 
+const BlogHeaderInfo = styled.div`
+  text-align: center;
+  padding: 10px 0 20px 0;
+  box-sizing: border-box;
+  justify-content: center;
+`;
+
 const BlogContent = styled.div`
   font-family: "Roboto Mono", monospace;
   width: 100% !important;
@@ -25,23 +34,9 @@ const BlogContent = styled.div`
   color: #fff;
 `;
 
-const FloatingBack = styled.button`
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  /* background-color: salmon; */
-  display: flex;
-  left: 50vw;
-  right: 50vw;
-  display: block;
-  margin: 0 auto;
-  outline: none;
-`;
 
 export default ({ data }) => {
   const post = data.markdownRemark;
-
   const readingTime = post.fields.readingTime.text;
 
   return (
@@ -50,18 +45,15 @@ export default ({ data }) => {
       <BlogContent className="container">
         <BlogHeader>
           <BlogHeaderText>{post.frontmatter.title}</BlogHeaderText>
+          <BlogHeaderInfo className="row">
+            <p className="col-md-2">{readingTime}</p>
+            <p className="col-md-3">{post.frontmatter.date}</p>
+          </BlogHeaderInfo>
         </BlogHeader>
         <p dangerouslySetInnerHTML={{ __html: post.html }} />
-        {/* <Content>
-        <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
-        </HeaderDate>
-        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Content> */}
-        <FloatingBack onClick={e => (window.location.pathname = "/blog")}>
-          X
-        </FloatingBack>
+        <Link className="floating-button-back" to="/blog">
+          <FontAwesomeIcon icon={faTimes} />
+        </Link>
       </BlogContent>
     </Layout>
   );

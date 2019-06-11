@@ -12,7 +12,7 @@ body {
 
 body hr {
   background-color: #fff;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 /* Blog style */
@@ -51,6 +51,30 @@ body hr {
 .blog-card span {
   font-size: 14px;
   color: #fcaf3e;
+}
+
+.floating-button-back {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 50%;
+  right: 50%;
+  bottom: 10px;
+
+  /* Display */
+  margin: 50px 0;
+  text-align: center;
+  line-height: 50px;
+  color: rgb(47, 48, 59);
+  font-size: 14px;
+
+  /* Shadow */
+  box-shadow: 0px 10px 80px rgba(47, 48, 59, 0.8);
+}
+.floating-button-back:hover {
+  color: #222222;
 }
 
 /* Responsive */
