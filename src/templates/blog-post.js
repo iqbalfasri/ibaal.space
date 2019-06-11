@@ -39,6 +39,8 @@ export default ({ data }) => {
   const post = data.markdownRemark;
   const readingTime = post.fields.readingTime.text;
 
+  console.log(data, "Error data disini")
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
