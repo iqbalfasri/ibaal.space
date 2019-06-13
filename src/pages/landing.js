@@ -8,7 +8,7 @@ function LandingPage() {
     <LandingStyled.ViewLanding>
       <Seo title="Homepage" />
       <div className="container" style={{ position: "relative"}}>
-        <div className="box" />
+        {/* <div className="box" /> */}
         <LandingStyled.TitleLanding className="title-landing">
           <Typed
             strings={["I'm a Frontend Developer &amp; UI Enthusiast."]}
